@@ -1,0 +1,12 @@
+nav {
+    display: flex;
+}
+
+nav a {
+    color: lightseagreen;
+    font-size: 3em;
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+

@@ -1,0 +1,21 @@
+<!doctype html>
+<title>Welcome Page</title>
+
+<div class="username"><b>Vitaj</b> {{username}}</div>
+
+<div class="array">
+    {% for number in array %}
+    <p>Cislo {{ number }}</p>
+    {% endfor %}
+</div>
+
+<div class="userObject">
+    {% if userObject %}
+    <li><span> Moje meno je {{ userObject.name }}</span>
+    <li><span>Moj email je {{ userObject.email }}</span>
+
+    {% else %}
+    <p>Nemam user object</p>
+    {% endif %}
+</div>
+

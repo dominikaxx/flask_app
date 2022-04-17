@@ -1,0 +1,21 @@
+{% extends 'website_base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Clanky {% endblock %}</h1>
+    <div style="width: 50%; margin: auto">
+        {% for article in articles %}
+            {% if loop.index % 2 == 0 %}
+                {% set bg_color = '#1E90FF' %}
+                {% set txt_color = 'white' %}
+            {% else %}
+                {% set bg_color = '#eee' %}
+            {% endif %}
+
+            <div style="padding: 10px; margin: 20px; background-color: {{ bg_color }}; color: {{ txt_color }}">
+                <p>{{ loop.index }}.</p>
+                <p style="font-size: 24px">{{ article }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+
